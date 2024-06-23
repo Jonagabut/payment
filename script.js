@@ -8,7 +8,7 @@ function generateRandomCustomerId() {
 function sendWhatsAppMessage(total, customerName, customerId) {
     var message = `pembayaran zon store:\n\nTotal: Rp ${total}\n\nPelanggan: ${customerName}\nID Pelanggan: ${customerId}\n\nSudah dibayar via DANA.`;
     var encodedMessage = encodeURIComponent(message);
-    window.location.href = `https://wa.me/6285175108301?text=${encodedMessage}`;
+    window.location.href = `https://wa.me/6285179798301?text=${encodedMessage}`;
     alert("Pesanan Anda telah berhasil. Terima kasih!");
 }
 
