@@ -15,7 +15,6 @@ function sendWhatsAppMessage(total, customerName, customerId) {
 // Fungsi untuk melakukan pembayaran
 function processPayment() {
     // Simulasi data pembelian
-    var total = 00;
     var customerName = "Buyer Zon";
     var customerId = generateRandomCustomerId(); // Menghasilkan ID pelanggan acak
 
