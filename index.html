@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Pembayaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://ibb.co.com/7Vxp88mtext=Background+Image') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+        .container {
+            position: relative; /* Make container relative to position logo absolutely */
+            width: 90%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            text-align: center;
+            padding-top: 60px; /* Add padding to top to make space for logo */
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            max-width: 100px;
+        }
+        .logo img {
+            width: 100%;
+            height: auto;
+        }
+        h1, h2 {
+            margin: 10px 0;
+        }
+        h1 {
+            color: #007bff;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .number {
+            font-size: 20px;
+            background: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            user-select: none;
+            display: inline-block;
+        }
+        .qris img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .qris-title {
+            color: #f44b4b; /* Ganti dengan warna yang mirip dengan QRIS */
+            font-size: 24px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <!-- Ganti src dengan path gambar logo toko Anda -->
+            <img src="logo.png" alt="Logo Store">
+        </div>
+        
+        <h2>payment Zon</h2>
+        
+        <div class="section">
+            <h1>DANA</h1>
+            <div class="number" id="danaNumber" onclick="copyNumber()">085173138301</div>
+        </div>
+        
+        <div class="section">
+            <h1 class="qris-title">QRIS</h1>
+            <div class="qris">
+                <!-- Ganti src dengan path gambar QRIS Anda -->
+                <img src="qris.png" alt="QRIS">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyNumber() {
+            const number = document.getElementById('danaNumber').innerText;
+            navigator.clipboard.writeText(number).then(() => {
+                alert('Nomor Dana telah disalin!');
+            }).catch(err => {
+                alert('Gagal menyalin nomor Dana.');
+                console.error(err);
+            });
+        }
+    </script>
+</body>
+</html>
